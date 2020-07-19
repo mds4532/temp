@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div>
+    <form method="POST">
+        {% csrf_token %}
+    <div>
+        <p>Название текста</p>
+        <input type="text" value="{{nameText}}" name="nameText">
+    </div>
+    <div>
+        <textarea class="form-control" rows=20 name="dataText">{{dataText}}</textarea>
+    </div>
+    <div>
+        <input type="submit" name="save" value="Сохранить">
+    </div>
+    </form>
+</div>
+
+{% endblock %}
